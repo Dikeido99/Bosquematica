@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://g1gjgxvj5bxb"]
+
+[ext_resource type="Script" path="res://Scenes/instructions_screen.gd" id="1_urogy"]
+[ext_resource type="Texture2D" uid="uid://gm3dvfrkhsge" path="res://Assets/AssetsAtrapaManzanas/Assets/bosque.png" id="1_x5ilx"]
+[ext_resource type="Theme" uid="uid://cs3nl7w47ys5h" path="res://Scenes/default_button.tres" id="2_hgj1m"]
+[ext_resource type="PackedScene" uid="uid://irv60eunjmpd" path="res://Scenes/controls_tab.tscn" id="3_5vv72"]
+[ext_resource type="PackedScene" uid="uid://c0nlf81j2v5dm" path="res://Scenes/enemies_tab.tscn" id="4_yf3au"]
+[ext_resource type="PackedScene" uid="uid://b2rou2c7bc1d" path="res://Scenes/items_tab.tscn" id="5_44n4d"]
+
+[node name="instructions_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_urogy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -36.0
+offset_right = 1216.0
+offset_bottom = 684.0
+texture = ExtResource("1_x5ilx")
+
+[node name="controls_tab" parent="." instance=ExtResource("3_5vv72")]
+visible = false
+layout_mode = 1
+offset_top = 18.0
+offset_bottom = 18.0
+
+[node name="enemies_tab" parent="." instance=ExtResource("4_yf3au")]
+visible = false
+layout_mode = 1
+
+[node name="items_tab" parent="." instance=ExtResource("5_44n4d")]
+visible = false
+layout_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 612.0
+offset_bottom = 57.0
+
+[node name="controls_btn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hgj1m")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Controles"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="enemies_btn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hgj1m")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Enemigos"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="items_btn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hgj1m")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Objetos"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -42.0
+offset_right = 362.0
+offset_bottom = -10.0
+grow_vertical = 0
+
+[node name="back_btn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hgj1m")
+theme_override_font_sizes/font_size = 24
+text = "Volver al Menú Principal"
+
+[connection signal="pressed" from="HBoxContainer/controls_btn" to="." method="_on_controls_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/enemies_btn" to="." method="_on_enemies_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/items_btn" to="." method="_on_items_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/back_btn" to="." method="_on_back_btn_pressed"]

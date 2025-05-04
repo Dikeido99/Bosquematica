@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://x4p2806wbl6t"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/Square Root Levels/select_sqr_levels.gd" id="1_3m30m"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="1_vwblh"]
+[ext_resource type="Texture2D" uid="uid://bp6bkwhv2jsq6" path="res://Assets/square_icon.png" id="2_mp85p"]
+[ext_resource type="PackedScene" uid="uid://itgch5o7a5g0" path="res://Scenes/level_btn.tscn" id="3_arepp"]
+[ext_resource type="Theme" uid="uid://cfkqwd2g2q3jl" path="res://Scenes/square_level.tres" id="4_qtlxy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h417h"]
+
+[node name="select_sqr_levels" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 384.0
+offset_bottom = 320.0
+script = ExtResource("1_3m30m")
+
+[node name="label_square" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 37.0
+offset_right = 406.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.686275, 0.568627, 1, 1)
+theme_override_colors/font_outline_color = Color(0.686275, 0.0784314, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_vwblh")
+theme_override_font_sizes/font_size = 42
+text = "RAÍZ CUADRADA"
+
+[node name="square_icon" type="Sprite2D" parent="."]
+position = Vector2(12, 59)
+texture = ExtResource("2_mp85p")
+
+[node name="square_levels" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 91.0
+offset_right = 312.0
+offset_bottom = 307.0
+
+[node name="level_btn" parent="square_levels" instance=ExtResource("3_arepp")]
+layout_mode = 2
+theme = ExtResource("4_qtlxy")
+theme_override_font_sizes/font_size = 24
+text = " Nivel 1"
+operation = "sqr"
+lvl_number = 1
+
+[node name="HSeparator" type="HSeparator" parent="square_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_h417h")
+
+[node name="level_btn2" parent="square_levels" instance=ExtResource("3_arepp")]
+layout_mode = 2
+theme = ExtResource("4_qtlxy")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = " Nivel 2"
+operation = "sqr"
+lvl_number = 2
+
+[node name="HSeparator2" type="HSeparator" parent="square_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_h417h")
+
+[node name="level_btn3" parent="square_levels" instance=ExtResource("3_arepp")]
+layout_mode = 2
+theme = ExtResource("4_qtlxy")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = " Nivel 3"
+operation = "sqr"
+lvl_number = 3
+
+[node name="HSeparator3" type="HSeparator" parent="square_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_h417h")
+
+[node name="level_btn4" parent="square_levels" instance=ExtResource("3_arepp")]
+layout_mode = 2
+theme = ExtResource("4_qtlxy")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = " Nivel 4"
+operation = "sqr"
+lvl_number = 4
+
+[node name="HSeparator4" type="HSeparator" parent="square_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_h417h")
+
+[node name="level_btn5" parent="square_levels" instance=ExtResource("3_arepp")]
+layout_mode = 2
+theme = ExtResource("4_qtlxy")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = " Nivel 5"
+operation = "sqr"
+lvl_number = 5
+
+[node name="HSeparator5" type="HSeparator" parent="square_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_h417h")

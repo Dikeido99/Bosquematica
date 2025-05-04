@@ -1,0 +1,299 @@
+[gd_scene load_steps=7 format=3 uid="uid://wswob1bn0sgu"]
+
+[ext_resource type="Theme" uid="uid://xu6u8fh05iwe" path="res://Scenes/Levels/pause_menu.tres" id="1_b3vlj"]
+[ext_resource type="Script" path="res://Scenes/Levels/level_score.gd" id="1_cayqj"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="3_p3fax"]
+[ext_resource type="AudioStream" uid="uid://dkdffq84bftk0" path="res://Audio/Background_Music/HeatleyBros - HeatleyBros I - 02 8 Bit Win.mp3" id="4_qfmcn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxdt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8biyd"]
+
+[node name="level_score" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_cayqj")
+
+[node name="bg_overlay" type="ColorRect" parent="."]
+z_index = 20
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.568627)
+
+[node name="label_sum" type="Label" parent="."]
+visible = false
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.5
+offset_top = 42.0
+offset_right = 81.5
+offset_bottom = 107.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.462745, 0, 1)
+theme_override_colors/font_outline_color = Color(0.996078, 0.686275, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 52
+text = "SUMA"
+
+[node name="label_substract" type="Label" parent="."]
+visible = false
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_top = 42.0
+offset_right = 98.0
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.462745, 0.670588, 1)
+theme_override_colors/font_outline_color = Color(0.952941, 0.243137, 0.529412, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 52
+text = "RESTA"
+
+[node name="label_multiply" type="Label" parent="."]
+visible = false
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 42.0
+offset_right = 180.0
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.235294, 0.235294, 1, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.686275, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 52
+text = "MULTIPLICA"
+
+[node name="label_divide" type="Label" parent="."]
+visible = false
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.5
+offset_top = 42.0
+offset_right = 101.5
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.117647, 0.627451, 0.611765, 1)
+theme_override_colors/font_outline_color = Color(0, 0.839216, 0.843137, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 52
+text = "DIVIDE"
+
+[node name="label_square" type="Label" parent="."]
+visible = false
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 50.0
+offset_right = 192.0
+offset_bottom = 106.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.686275, 0.568627, 1, 1)
+theme_override_colors/font_outline_color = Color(0.686275, 0.0784314, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 52
+text = "RAÍZ CUADRADA"
+
+[node name="label_lvl_complete" type="Label" parent="."]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -380.0
+offset_top = 133.0
+offset_right = 380.0
+offset_bottom = 216.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 64
+text = "COMPLETADO!"
+horizontal_alignment = 1
+
+[node name="score_holder" type="HBoxContainer" parent="."]
+z_index = 20
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -390.0
+offset_top = -73.0
+offset_right = 390.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="continues_holder" type="HBoxContainer" parent="score_holder"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="continues_label" type="Label" parent="score_holder/continues_holder"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 24
+text = "Muertes: "
+
+[node name="continues_counter" type="Label" parent="score_holder/continues_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="VSeparator" type="VSeparator" parent="score_holder"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xxdt6")
+
+[node name="quiz_holder" type="HBoxContainer" parent="score_holder"]
+layout_mode = 2
+
+[node name="quiz_label" type="Label" parent="score_holder/quiz_holder"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 24
+text = "Incorrectas / en blanco: "
+
+[node name="quiz_counter" type="Label" parent="score_holder/quiz_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="VSeparator2" type="VSeparator" parent="score_holder"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_8biyd")
+
+[node name="time_holder" type="HBoxContainer" parent="score_holder"]
+layout_mode = 2
+
+[node name="time_label" type="Label" parent="score_holder/time_holder"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 24
+text = "Tiempo: "
+
+[node name="time_counter" type="Label" parent="score_holder/time_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 24
+text = "00:00"
+
+[node name="final_score_container" type="HBoxContainer" parent="."]
+z_index = 20
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 11.5
+offset_right = 228.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="final_score_label" type="Label" parent="final_score_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 48
+text = "CALIFICACIÓN: "
+horizontal_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="final_score_container"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xxdt6")
+
+[node name="final_score_counter" type="Label" parent="final_score_container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("3_p3fax")
+theme_override_font_sizes/font_size = 48
+text = "1"
+
+[node name="menu_holder" type="VBoxContainer" parent="."]
+z_index = 20
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 149.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="credits_btn" type="Button" parent="menu_holder"]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_b3vlj")
+theme_override_font_sizes/font_size = 32
+text = "Continuar"
+
+[node name="next_btn" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("1_b3vlj")
+theme_override_font_sizes/font_size = 32
+text = "Siguiente Nivel"
+
+[node name="select_btn" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("1_b3vlj")
+theme_override_font_sizes/font_size = 32
+text = "Seleccionar Nivel"
+
+[node name="quit_btn" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("1_b3vlj")
+theme_override_font_sizes/font_size = 32
+text = "Volver al Menú Principal"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qfmcn")
+volume_db = -18.0
+
+[connection signal="pressed" from="menu_holder/credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="menu_holder/next_btn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="menu_holder/select_btn" to="." method="_on_select_btn_pressed"]
+[connection signal="pressed" from="menu_holder/quit_btn" to="." method="_on_quit_btn_pressed"]

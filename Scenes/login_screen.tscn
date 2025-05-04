@@ -1,0 +1,212 @@
+[gd_scene load_steps=13 format=3 uid="uid://cwmnrrxv20uwn"]
+
+[ext_resource type="Script" path="res://Scenes/login_screen.gd" id="1_847t4"]
+[ext_resource type="Texture2D" uid="uid://gm3dvfrkhsge" path="res://Assets/AssetsAtrapaManzanas/Assets/bosque.png" id="1_lcdfu"]
+[ext_resource type="Texture2D" uid="uid://k7orl8dpc4y2" path="res://Assets/Dialog_Box(16 x 16).png" id="2_n40dk"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="3_ef1sa"]
+[ext_resource type="Texture2D" uid="uid://b0m7vcvoo2asu" path="res://Assets/Game_Logo.png" id="5_obgy3"]
+[ext_resource type="Texture2D" uid="uid://cfdg7j1drermj" path="res://Assets/sum_final_icon.png" id="6_gijwk"]
+[ext_resource type="Texture2D" uid="uid://buyvq0ldxvqaf" path="res://Assets/sub_final_icon.png" id="7_s7i0s"]
+[ext_resource type="Texture2D" uid="uid://d10m31d3o4038" path="res://Assets/mul_final_icon.png" id="8_ak77p"]
+[ext_resource type="Texture2D" uid="uid://bhlpa05yeg2d4" path="res://Assets/div_final_icon.png" id="9_h4lv6"]
+[ext_resource type="Theme" uid="uid://cs3nl7w47ys5h" path="res://Scenes/default_button.tres" id="10_0j1eq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vesij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ap3jh"]
+
+[node name="login_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_847t4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -36.0
+offset_right = 1216.0
+offset_bottom = 684.0
+texture = ExtResource("1_lcdfu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -123.0
+offset_right = 112.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="user_label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.462745, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_ef1sa")
+theme_override_font_sizes/font_size = 32
+text = "Usuario"
+horizontal_alignment = 1
+
+[node name="user_submit" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/user_submit"]
+layout_mode = 2
+texture = ExtResource("2_n40dk")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/user_submit"]
+layout_mode = 2
+
+[node name="player_name" type="LineEdit" parent="VBoxContainer/user_submit/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef1sa")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vesij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ap3jh")
+alignment = 1
+caret_blink = true
+
+[node name="password_label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.462745, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_ef1sa")
+theme_override_font_sizes/font_size = 32
+text = "Contraseña"
+horizontal_alignment = 1
+
+[node name="password_submit" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/password_submit"]
+layout_mode = 2
+texture = ExtResource("2_n40dk")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/password_submit"]
+layout_mode = 2
+
+[node name="player_password" type="LineEdit" parent="VBoxContainer/password_submit/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef1sa")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vesij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ap3jh")
+alignment = 1
+caret_blink = true
+secret = true
+secret_character = "*"
+
+[node name="game_logo" type="Sprite2D" parent="."]
+position = Vector2(575, 155)
+scale = Vector2(0.414063, 0.435484)
+texture = ExtResource("5_obgy3")
+
+[node name="sum_icon" type="Sprite2D" parent="."]
+position = Vector2(368, 105)
+scale = Vector2(0.31015, 0.308)
+texture = ExtResource("6_gijwk")
+
+[node name="substract_icon" type="Sprite2D" parent="."]
+position = Vector2(776, 89)
+scale = Vector2(0.287152, 0.270408)
+texture = ExtResource("7_s7i0s")
+
+[node name="multiply_icon" type="Sprite2D" parent="."]
+position = Vector2(384, 217)
+scale = Vector2(0.149123, 0.114973)
+texture = ExtResource("8_ak77p")
+
+[node name="divide_icon" type="Sprite2D" parent="."]
+position = Vector2(784, 217)
+rotation = 0.767945
+scale = Vector2(0.169725, 0.125899)
+texture = ExtResource("9_h4lv6")
+
+[node name="quit_btn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 456.0
+offset_right = 619.0
+offset_bottom = 498.0
+theme = ExtResource("10_0j1eq")
+theme_override_font_sizes/font_size = 24
+text = "Salir"
+
+[node name="login_btn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 615.0
+offset_top = 398.0
+offset_right = 734.0
+offset_bottom = 440.0
+theme = ExtResource("10_0j1eq")
+theme_override_font_sizes/font_size = 24
+text = "Acceder"
+
+[node name="signin_btn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 398.0
+offset_right = 554.0
+offset_bottom = 440.0
+theme = ExtResource("10_0j1eq")
+theme_override_font_sizes/font_size = 16
+text = "Crear
+Nuevo Usuario"
+
+[node name="error_message" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 432.0
+offset_top = 361.0
+offset_right = 726.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_ef1sa")
+theme_override_font_sizes/font_size = 16
+text = "* mensaje de error de login *"
+horizontal_alignment = 1
+
+[node name="accept_message" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 432.0
+offset_top = 361.0
+offset_right = 726.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_ef1sa")
+theme_override_font_sizes/font_size = 16
+text = "* mensaje de login correcto *"
+horizontal_alignment = 1
+
+[node name="login_timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="quit_btn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="login_btn" to="." method="_on_login_btn_pressed"]
+[connection signal="pressed" from="signin_btn" to="." method="_on_signin_btn_pressed"]

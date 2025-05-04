@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkdffq84bftk0"
+path="res://.godot/imported/HeatleyBros - HeatleyBros I - 02 8 Bit Win.mp3-ff32e28c1ba9079228ecf11a8eb9e547.mp3str"
+
+[deps]
+
+source_file="res://Audio/Background_Music/HeatleyBros - HeatleyBros I - 02 8 Bit Win.mp3"
+dest_files=["res://.godot/imported/HeatleyBros - HeatleyBros I - 02 8 Bit Win.mp3-ff32e28c1ba9079228ecf11a8eb9e547.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

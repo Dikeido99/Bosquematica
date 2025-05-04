@@ -1,0 +1,171 @@
+[gd_scene load_steps=11 format=3 uid="uid://b4apwgdcrxu5y"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/hud_manager.gd" id="1_4g7cb"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="1_dfp1p"]
+[ext_resource type="Texture2D" uid="uid://t6waxdbfl00v" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/run/player-run-2.png" id="2_ovepf"]
+[ext_resource type="Texture2D" uid="uid://dg65ocb8v1x87" path="res://Assets/Health_Hud.png" id="4_jy80b"]
+[ext_resource type="Texture2D" uid="uid://ddo2dw8efjyew" path="res://Assets/sum_sprt.png" id="4_xjumy"]
+[ext_resource type="Texture2D" uid="uid://obo25dexalma" path="res://Assets/substract_sprt.png" id="5_b0heo"]
+[ext_resource type="Texture2D" uid="uid://cxuoyn54io3hm" path="res://Assets/multiply_sprt.png" id="6_bl2mp"]
+[ext_resource type="Texture2D" uid="uid://d1k14mpujnmoo" path="res://Assets/divide_sprt.png" id="7_5vco5"]
+[ext_resource type="Texture2D" uid="uid://dvb16aj6mqxah" path="res://Assets/square_sprt.png" id="8_stsg0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_psygc"]
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+
+[node name="control" type="Control" parent="."]
+z_index = 15
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4g7cb")
+
+[node name="container" type="MarginContainer" parent="control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="continue_container" type="HBoxContainer" parent="control/container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="player_icon" type="Sprite2D" parent="control/container/VBoxContainer/continue_container"]
+position = Vector2(21.75, 7)
+scale = Vector2(2.19697, 1.75)
+texture = ExtResource("2_ovepf")
+
+[node name="separator" type="Label" parent="control/container/VBoxContainer/continue_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "         x"
+vertical_alignment = 1
+
+[node name="continue_counter" type="Label" parent="control/container/VBoxContainer/continue_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "4"
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="control/container/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_psygc")
+
+[node name="life_container" type="HBoxContainer" parent="control/container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="heart_sprt" type="Sprite2D" parent="control/container/VBoxContainer/life_container"]
+position = Vector2(18, 14.5)
+scale = Vector2(1.4375, 1.29688)
+texture = ExtResource("4_jy80b")
+
+[node name="life_label" type="Label" parent="control/container/VBoxContainer/life_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "       x"
+vertical_alignment = 1
+
+[node name="life_counter" type="Label" parent="control/container/VBoxContainer/life_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "05"
+vertical_alignment = 1
+
+[node name="score_container" type="HBoxContainer" parent="control/container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="sum_sprt" type="Sprite2D" parent="control/container/score_container"]
+visible = false
+position = Vector2(-31, 6)
+scale = Vector2(0.373333, 0.24)
+texture = ExtResource("4_xjumy")
+
+[node name="sub_sprt" type="Sprite2D" parent="control/container/score_container"]
+visible = false
+position = Vector2(-31, 6)
+scale = Vector2(0.373333, 0.24)
+texture = ExtResource("5_b0heo")
+
+[node name="mul_sprt" type="Sprite2D" parent="control/container/score_container"]
+visible = false
+position = Vector2(-31, 6)
+scale = Vector2(0.373333, 0.24)
+texture = ExtResource("6_bl2mp")
+
+[node name="div_sprt" type="Sprite2D" parent="control/container/score_container"]
+visible = false
+position = Vector2(-31, 6)
+scale = Vector2(0.373333, 0.24)
+texture = ExtResource("7_5vco5")
+
+[node name="sqr_sprt" type="Sprite2D" parent="control/container/score_container"]
+visible = false
+position = Vector2(-31, 6)
+scale = Vector2(0.373333, 0.24)
+texture = ExtResource("8_stsg0")
+
+[node name="score_label" type="Label" parent="control/container/score_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "Resueltos: "
+vertical_alignment = 1
+
+[node name="score_counter" type="Label" parent="control/container/score_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "0"
+vertical_alignment = 1
+
+[node name="time_container" type="HBoxContainer" parent="control/container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="time_label" type="Label" parent="control/container/time_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "Tiempo:"
+vertical_alignment = 1
+
+[node name="time_counter" type="Label" parent="control/container/time_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dfp1p")
+text = "00:00"
+vertical_alignment = 1

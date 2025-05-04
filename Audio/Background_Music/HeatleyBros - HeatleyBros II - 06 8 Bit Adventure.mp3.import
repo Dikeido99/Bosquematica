@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdgabgrcjh08m"
+path="res://.godot/imported/HeatleyBros - HeatleyBros II - 06 8 Bit Adventure.mp3-51b388c7fa6f48fb4fa6e2e94fb401c1.mp3str"
+
+[deps]
+
+source_file="res://Audio/Background_Music/HeatleyBros - HeatleyBros II - 06 8 Bit Adventure.mp3"
+dest_files=["res://.godot/imported/HeatleyBros - HeatleyBros II - 06 8 Bit Adventure.mp3-51b388c7fa6f48fb4fa6e2e94fb401c1.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1gdn7elil8ma"]
+
+[ext_resource type="AudioStream" uid="uid://p1dtltc5m5fa" path="res://Audio/Background_Music/SPring(Main Menu Theme).mp3" id="1_8cv6c"]
+
+[node name="title_screen_theme" type="AudioStreamPlayer"]
+stream = ExtResource("1_8cv6c")
+volume_db = -12.0

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://itgch5o7a5g0"]
+
+[ext_resource type="Theme" uid="uid://cs3nl7w47ys5h" path="res://Scenes/default_button.tres" id="1_465ih"]
+[ext_resource type="Script" path="res://Scenes/level_btn.gd" id="2_xy24g"]
+
+[node name="level_btn" type="Button"]
+theme = ExtResource("1_465ih")
+text = " Nivel "
+script = ExtResource("2_xy24g")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

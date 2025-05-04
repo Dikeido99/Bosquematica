@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://xu6u8fh05iwe"]
+
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="1_jkceq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j6aio"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2nfbx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bife5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_22duf"]
+
+[resource]
+Button/colors/font_focus_color = Color(1, 1, 0, 1)
+Button/colors/font_hover_color = Color(1, 1, 0, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 0.521569, 0, 1)
+Button/constants/outline_size = 10
+Button/fonts/font = ExtResource("1_jkceq")
+Button/styles/focus = SubResource("StyleBoxEmpty_j6aio")
+Button/styles/hover = SubResource("StyleBoxEmpty_2nfbx")
+Button/styles/normal = SubResource("StyleBoxEmpty_bife5")
+Button/styles/pressed = SubResource("StyleBoxEmpty_22duf")

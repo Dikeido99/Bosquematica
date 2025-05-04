@@ -1,0 +1,219 @@
+[gd_scene load_steps=30 format=3 uid="uid://c0nlf81j2v5dm"]
+
+[ext_resource type="Texture2D" uid="uid://dleqpt8sm4vju" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Enemies/Bee/Idle (36x34).png" id="1_m2vjv"]
+[ext_resource type="Texture2D" uid="uid://v8aegvsgkek0" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Enemies/Mushroom/Run (32x32).png" id="2_72uln"]
+[ext_resource type="Texture2D" uid="uid://h2up1dkoa0w7" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Enemies/Trunk/Run (64x32).png" id="3_i6uib"]
+[ext_resource type="Texture2D" uid="uid://ly1wy3fdcdfw" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Enemies/Snail/Walk (38x24).png" id="4_etocy"]
+[ext_resource type="Texture2D" uid="uid://ce3g4snk22jf7" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Enemies/Chameleon/Run (84x38).png" id="5_6gkgh"]
+[ext_resource type="Texture2D" uid="uid://c3mlfx5ntr0tg" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Enemies/Bunny/Run (34x44).png" id="6_3d2s4"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="7_fc8tu"]
+[ext_resource type="Texture2D" uid="uid://n311nc4qf1ye" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Enemies/Turtle/Idle 2 (44x26).png" id="8_mqr28"]
+[ext_resource type="Texture2D" uid="uid://drdpljnxy1m6m" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Traps/Rock Head/Blink (42x42).png" id="9_1k4nh"]
+[ext_resource type="Texture2D" uid="uid://uula7j4s5boq" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Traps/Spike Head/Blink (54x52).png" id="10_iqxj2"]
+[ext_resource type="Texture2D" uid="uid://cq8ebwwbuhdx4" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Traps/Spike Head/Idle.png" id="11_qmohm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpjjc"]
+atlas = ExtResource("1_m2vjv")
+region = Rect2(144, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pbkj"]
+atlas = ExtResource("2_72uln")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b7np"]
+atlas = ExtResource("3_i6uib")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4362m"]
+atlas = ExtResource("4_etocy")
+region = Rect2(0, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3188i"]
+atlas = ExtResource("5_6gkgh")
+region = Rect2(42, 0, 42, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p8qu"]
+atlas = ExtResource("6_3d2s4")
+region = Rect2(374, 0, 34, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxd8f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpjjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pbkj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b7np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4362m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3188i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p8qu")
+}],
+"loop": true,
+"name": &"demo",
+"speed": 0.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be0rl"]
+atlas = ExtResource("8_mqr28")
+region = Rect2(0, 0, 44, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow807"]
+atlas = ExtResource("9_1k4nh")
+region = Rect2(0, 0, 42, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24ck4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_be0rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow807")
+}],
+"loop": true,
+"name": &"demo",
+"speed": 0.2
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc0jo"]
+atlas = ExtResource("10_iqxj2")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6p7rh"]
+atlas = ExtResource("10_iqxj2")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inpgg"]
+atlas = ExtResource("10_iqxj2")
+region = Rect2(54, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8dpu"]
+atlas = ExtResource("10_iqxj2")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g8oy"]
+atlas = ExtResource("10_iqxj2")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqwe2"]
+atlas = ExtResource("11_qmohm")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti7co"]
+atlas = ExtResource("11_qmohm")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ga77"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc0jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6p7rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inpgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8dpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g8oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqwe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti7co")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qmohm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qmohm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[node name="enemies_tab" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="floor_enemy_sprt" type="AnimatedSprite2D" parent="."]
+position = Vector2(161, 219)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_xxd8f")
+animation = &"demo"
+autoplay = "demo"
+
+[node name="floor_enemy" type="Label" parent="."]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 194.0
+offset_right = 977.0
+offset_bottom = 315.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_fc8tu")
+theme_override_font_sizes/font_size = 22
+text = "Puedes saltar sobre estos enemigos para eliminarlos,
+cuidado que no te toquen!"
+
+[node name="platform_enemy_sprt" type="AnimatedSprite2D" parent="."]
+position = Vector2(164, 318)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_24ck4")
+animation = &"demo"
+autoplay = "demo"
+
+[node name="platform_enemy" type="Label" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 301.0
+offset_right = 1080.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_fc8tu")
+theme_override_font_sizes/font_size = 22
+text = "Estos enemigos no pueden ser eliminados, pero estate atento
+quizá puedas usarlos a tu favor."
+
+[node name="spike_enemy_sprt" type="AnimatedSprite2D" parent="."]
+position = Vector2(168, 449)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2ga77")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="spike_enemy" type="Label" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 414.0
+offset_right = 1080.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_fc8tu")
+theme_override_font_sizes/font_size = 22
+text = "Estos enemigos no pueden ser eliminados, no dejes que te 
+toquen bajo ninguna circunstancia!"

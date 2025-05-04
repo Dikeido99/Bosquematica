@@ -1,0 +1,132 @@
+[gd_scene load_steps=11 format=3 uid="uid://di0bdcxhef6oo"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/Multiply Levels/select_mul_levels.gd" id="1_febew"]
+[ext_resource type="PackedScene" uid="uid://itgch5o7a5g0" path="res://Scenes/level_btn.tscn" id="3_oxswe"]
+[ext_resource type="Theme" uid="uid://nawek5tdlh2f" path="res://Scenes/multiply_level.tres" id="4_wle77"]
+[ext_resource type="PackedScene" uid="uid://d3tocvamesphd" path="res://Scenes/Levels/Multiply Levels/Multiply_lvl_1.tscn" id="6_k0g1h"]
+[ext_resource type="PackedScene" uid="uid://bvjjynqouljoj" path="res://Scenes/Levels/Multiply Levels/Multiply_lvl_2.tscn" id="7_olgja"]
+[ext_resource type="PackedScene" uid="uid://cv0if1f4doj15" path="res://Scenes/Levels/Multiply Levels/Multiply_lvl_3.tscn" id="8_4iqse"]
+[ext_resource type="PackedScene" uid="uid://cmc0407pyxp4o" path="res://Scenes/Levels/Multiply Levels/Multiply_lvl_4.tscn" id="9_0vrf5"]
+[ext_resource type="PackedScene" uid="uid://o2kubx8x2u83" path="res://Scenes/stats_btn.tscn" id="9_ty2vd"]
+[ext_resource type="PackedScene" uid="uid://bhko4hqbwemkn" path="res://Scenes/Levels/Multiply Levels/Multiply_lvl_5.tscn" id="10_6nnh2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rthlv"]
+
+[node name="select_mul_levels" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 216.0
+script = ExtResource("1_febew")
+
+[node name="multiply_levels" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 242.0
+offset_bottom = 208.0
+
+[node name="level_btn" parent="multiply_levels" instance=ExtResource("3_oxswe")]
+layout_mode = 2
+theme = ExtResource("4_wle77")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "1- Decenas
+"
+alignment = 0
+level = ExtResource("6_k0g1h")
+
+[node name="HSeparator" type="HSeparator" parent="multiply_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rthlv")
+
+[node name="level_btn2" parent="multiply_levels" instance=ExtResource("3_oxswe")]
+layout_mode = 2
+theme = ExtResource("4_wle77")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "2- Centenas 1"
+alignment = 0
+level = ExtResource("7_olgja")
+
+[node name="HSeparator2" type="HSeparator" parent="multiply_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rthlv")
+
+[node name="level_btn3" parent="multiply_levels" instance=ExtResource("3_oxswe")]
+layout_mode = 2
+theme = ExtResource("4_wle77")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "3- Centenas 2"
+alignment = 0
+level = ExtResource("8_4iqse")
+
+[node name="HSeparator3" type="HSeparator" parent="multiply_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rthlv")
+
+[node name="level_btn4" parent="multiply_levels" instance=ExtResource("3_oxswe")]
+layout_mode = 2
+theme = ExtResource("4_wle77")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "4- Miles 1"
+alignment = 0
+level = ExtResource("9_0vrf5")
+
+[node name="HSeparator4" type="HSeparator" parent="multiply_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rthlv")
+
+[node name="level_btn5" parent="multiply_levels" instance=ExtResource("3_oxswe")]
+layout_mode = 2
+theme = ExtResource("4_wle77")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "5- Miles 2"
+alignment = 0
+level = ExtResource("10_6nnh2")
+
+[node name="stats_btn" parent="." instance=ExtResource("9_ty2vd")]
+layout_mode = 0
+offset_left = 256.0
+offset_top = -2.0
+offset_right = 296.0
+offset_bottom = 34.0
+level_number = 1
+operation_lvl = "mul"
+
+[node name="stats_btn2" parent="." instance=ExtResource("9_ty2vd")]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 44.0
+offset_right = 296.0
+offset_bottom = 80.0
+level_number = 2
+operation_lvl = "mul"
+
+[node name="stats_btn3" parent="." instance=ExtResource("9_ty2vd")]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 87.0
+offset_right = 296.0
+offset_bottom = 123.0
+level_number = 3
+operation_lvl = "mul"
+
+[node name="stats_btn4" parent="." instance=ExtResource("9_ty2vd")]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 131.0
+offset_right = 296.0
+offset_bottom = 167.0
+level_number = 4
+operation_lvl = "mul"
+
+[node name="stats_btn5" parent="." instance=ExtResource("9_ty2vd")]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 173.0
+offset_right = 296.0
+offset_bottom = 209.0
+level_number = 5
+operation_lvl = "mul"

@@ -1,0 +1,170 @@
+[gd_scene load_steps=15 format=3 uid="uid://bknxuqh4tqt8c"]
+
+[ext_resource type="AudioStream" uid="uid://br55ug50rt33e" path="res://Assets/AssetsAtrapaManzanas/Assets/Sonidos/Explosion_00.mp3" id="1_4xgew"]
+[ext_resource type="Script" path="res://Scenes/Dialogues/no_answer_body.gd" id="1_m4dir"]
+[ext_resource type="Texture2D" uid="uid://bfopp08iyijc4" path="res://Assets/explosion.png" id="2_ih6ff"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r87m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msqkx"]
+atlas = ExtResource("2_ih6ff")
+region = Rect2(0, 0, 267, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08qo0"]
+atlas = ExtResource("2_ih6ff")
+region = Rect2(267, 0, 267, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52oth"]
+atlas = ExtResource("2_ih6ff")
+region = Rect2(534, 0, 267, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oufln"]
+atlas = ExtResource("2_ih6ff")
+region = Rect2(0, 311, 267, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62r5d"]
+atlas = ExtResource("2_ih6ff")
+region = Rect2(267, 311, 267, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w341"]
+atlas = ExtResource("2_ih6ff")
+region = Rect2(534, 311, 267, 311)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r8ne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msqkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08qo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52oth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oufln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62r5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w341")
+}],
+"loop": true,
+"name": &"explode",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_ol1kp"]
+resource_name = "explode"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("SpriteFrames_4r8ne")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"explode"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_dkj4t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("SpriteFrames_4r8ne")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"explode"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6raw0"]
+_data = {
+"RESET": SubResource("Animation_dkj4t"),
+"explode": SubResource("Animation_ol1kp")
+}
+
+[node name="No_answer_body" type="StaticBody2D" groups=["Timeout_body"]]
+position = Vector2(0, -10)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_m4dir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1r87m")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_4xgew")
+volume_db = -18.0
+autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_4r8ne")
+animation = &"explode"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "explode"
+libraries = {
+"": SubResource("AnimationLibrary_6raw0")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

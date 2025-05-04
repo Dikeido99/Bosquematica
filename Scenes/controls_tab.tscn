@@ -1,0 +1,211 @@
+[gd_scene load_steps=20 format=3 uid="uid://irv60eunjmpd"]
+
+[ext_resource type="Texture2D" uid="uid://c8j3y3kt5t4uq" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/hurt/player-hurt-1.png" id="1_3f27t"]
+[ext_resource type="Texture2D" uid="uid://vg4ka2f8syfy" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/hurt/player-hurt-2.png" id="2_drogo"]
+[ext_resource type="Texture2D" uid="uid://csfwbjq1kt7h2" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/idle/player-idle-1.png" id="3_m8fv3"]
+[ext_resource type="Texture2D" uid="uid://vdmp8bjq0dur" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/idle/player-idle-2.png" id="4_nqm71"]
+[ext_resource type="Texture2D" uid="uid://cc1am7vtn5lav" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/idle/player-idle-3.png" id="5_7jiku"]
+[ext_resource type="Texture2D" uid="uid://dwodyq1m6dk2b" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/idle/player-idle-4.png" id="6_tup3s"]
+[ext_resource type="Texture2D" uid="uid://t6waxdbfl00v" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/run/player-run-2.png" id="7_x6u0i"]
+[ext_resource type="Texture2D" uid="uid://bh5i6jfakeilr" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/run/player-run-1.png" id="8_wfw1o"]
+[ext_resource type="Texture2D" uid="uid://crcgtxc4txsro" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/run/player-run-3.png" id="9_ow1go"]
+[ext_resource type="Texture2D" uid="uid://bf14efadofmai" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/run/player-run-4.png" id="10_rxh3g"]
+[ext_resource type="Texture2D" uid="uid://debnqql6360lv" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/run/player-run-5.png" id="11_bf06v"]
+[ext_resource type="Texture2D" uid="uid://cxg8lr6imv6gy" path="res://Assets/AssetsAtrapaManzanas/Assets/Jugador/run/player-run-6.png" id="12_w1h73"]
+[ext_resource type="Texture2D" uid="uid://blu7ou3f0hxim" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_right_NORMAL.png" id="13_hloaa"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="14_7nxhc"]
+[ext_resource type="Texture2D" uid="uid://durp1pco6q1x7" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_left_NORMAL.png" id="15_bwrod"]
+[ext_resource type="Texture2D" uid="uid://bi3rfewyop7pb" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_up_NORMAL.png" id="16_437kp"]
+[ext_resource type="Texture2D" uid="uid://d4lj4mknna3gy" path="res://Assets/mini_ui_buttons/mini_ui_buttons/interact.png" id="17_s58t2"]
+[ext_resource type="Texture2D" uid="uid://dn3ur6wm0qik0" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Menu/Buttons/Play.png" id="18_s3tdm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sm2kk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3f27t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_drogo")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m8fv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nqm71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7jiku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tup3s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 100.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_x6u0i")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wfw1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x6u0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ow1go")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rxh3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bf06v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w1h73")
+}],
+"loop": true,
+"name": &"move",
+"speed": 100.0
+}]
+
+[node name="controls_tab" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="player_move_1" type="AnimatedSprite2D" parent="."]
+position = Vector2(104, 191)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_sm2kk")
+animation = &"move"
+autoplay = "move"
+speed_scale = 0.1
+
+[node name="right_sprt" type="Sprite2D" parent="."]
+position = Vector2(182.5, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("13_hloaa")
+
+[node name="move_1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 240.5
+offset_top = 182.0
+offset_right = 679.5
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("14_7nxhc")
+theme_override_font_sizes/font_size = 22
+text = "o la tecla \"D\" para moverte
+hacia la derecha."
+
+[node name="player_move_2" type="AnimatedSprite2D" parent="."]
+position = Vector2(96, 327)
+rotation = 3.14159
+scale = Vector2(3, -3)
+sprite_frames = SubResource("SpriteFrames_sm2kk")
+animation = &"move"
+autoplay = "move"
+speed_scale = 0.1
+
+[node name="left_sprt" type="Sprite2D" parent="."]
+position = Vector2(182.5, 342)
+scale = Vector2(2, 2)
+texture = ExtResource("15_bwrod")
+
+[node name="move_2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 240.5
+offset_top = 311.0
+offset_right = 679.5
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("14_7nxhc")
+theme_override_font_sizes/font_size = 22
+text = "o la tecla \"A\" para moverte
+hacia la izquierda."
+
+[node name="player_move_3" type="AnimatedSprite2D" parent="."]
+position = Vector2(96, 447)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_sm2kk")
+animation = &"jump"
+autoplay = "jump"
+speed_scale = 0.1
+
+[node name="jump_sprt" type="Sprite2D" parent="."]
+position = Vector2(185.5, 467)
+scale = Vector2(2, 2)
+texture = ExtResource("16_437kp")
+
+[node name="move_3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 246.5
+offset_top = 450.0
+offset_right = 685.5
+offset_bottom = 519.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("14_7nxhc")
+theme_override_font_sizes/font_size = 22
+text = "o la tecla \"W\" para saltar."
+
+[node name="interaction_sprt" type="Sprite2D" parent="."]
+position = Vector2(735.5, 240)
+scale = Vector2(3, 3)
+texture = ExtResource("17_s58t2")
+
+[node name="interact" type="Label" parent="."]
+layout_mode = 0
+offset_left = 791.5
+offset_top = 216.0
+offset_right = 1133.5
+offset_bottom = 376.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("14_7nxhc")
+theme_override_font_sizes/font_size = 22
+text = "o la tecla \"I\" para 
+poder interactuar
+con el entorno del 
+juego."
+
+[node name="pause_sprt" type="Sprite2D" parent="."]
+position = Vector2(736, 415)
+scale = Vector2(3, 3)
+texture = ExtResource("18_s3tdm")
+
+[node name="pause" type="Label" parent="."]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 385.0
+offset_right = 1134.0
+offset_bottom = 462.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("14_7nxhc")
+theme_override_font_sizes/font_size = 22
+text = "o la tecla \"Esc\"  para
+pausar el juego."

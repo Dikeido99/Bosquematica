@@ -1,0 +1,356 @@
+[gd_scene load_steps=10 format=3 uid="uid://cxldx3e8bt7lx"]
+
+[ext_resource type="Script" path="res://Scenes/menu_lvl_score.gd" id="1_i53sx"]
+[ext_resource type="Texture2D" uid="uid://tfg3ak00uytp" path="res://Assets/free-cartoon-game-backgrounds/PNG/Cartoon_Forest_BG_03/Cartoon_Forest_BG_03.png" id="1_sjsx1"]
+[ext_resource type="Texture2D" uid="uid://q0yyxjxe67yv" path="res://Assets/free-cartoon-game-backgrounds/PNG/Cartoon_Forest_BG_04/Cartoon_Forest_BG_04.png" id="2_t42bi"]
+[ext_resource type="Texture2D" uid="uid://gmlw4uetdmg" path="res://Assets/free-cartoon-game-backgrounds/PNG/Cartoon_Forest_BG_02/Cartoon_Forest_BG_02.png" id="3_44uea"]
+[ext_resource type="Texture2D" uid="uid://wek50yjphqj2" path="res://Assets/free-cartoon-game-backgrounds/PNG/Cartoon_Snow_Forest_BG/BG_01.png" id="4_nyg04"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="5_8mdjb"]
+[ext_resource type="Theme" uid="uid://cs3nl7w47ys5h" path="res://Scenes/default_button.tres" id="6_jjht0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_esdwp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4itwd"]
+
+[node name="menu_lvl_score" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i53sx")
+
+[node name="bg_sum" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 643.0
+texture = ExtResource("1_sjsx1")
+expand_mode = 2
+
+[node name="bg_sub" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 645.0
+texture = ExtResource("2_t42bi")
+expand_mode = 2
+
+[node name="bg_mul" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+texture = ExtResource("3_44uea")
+expand_mode = 2
+
+[node name="bg_div" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 645.0
+texture = ExtResource("4_nyg04")
+expand_mode = 2
+
+[node name="bg_overlay" type="ColorRect" parent="."]
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.32549)
+
+[node name="label_sum" type="Label" parent="."]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -122.0
+offset_right = 447.0
+offset_bottom = -66.0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.462745, 0, 1)
+theme_override_colors/font_outline_color = Color(0.996078, 0.686275, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 36
+text = "SUMA"
+
+[node name="label_substract" type="Label" parent="."]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -122.0
+offset_right = 459.0
+offset_bottom = -66.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.462745, 0.670588, 1)
+theme_override_colors/font_outline_color = Color(0.952941, 0.243137, 0.529412, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 36
+text = "RESTA"
+
+[node name="label_multiply" type="Label" parent="."]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -122.0
+offset_right = 459.0
+offset_bottom = -66.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.235294, 0.235294, 1, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.686275, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 36
+text = "MULTIPLICA"
+
+[node name="label_divide" type="Label" parent="."]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -122.0
+offset_right = 459.0
+offset_bottom = -66.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.117647, 0.627451, 0.611765, 1)
+theme_override_colors/font_outline_color = Color(0, 0.839216, 0.843137, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 36
+text = "DIVIDE"
+
+[node name="label_square" type="Label" parent="."]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -118.0
+offset_right = 459.0
+offset_bottom = -70.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.686275, 0.568627, 1, 1)
+theme_override_colors/font_outline_color = Color(0.686275, 0.0784314, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 36
+text = "RAÍZ CUADRADA"
+
+[node name="label_perfomance" type="Label" parent="."]
+z_index = 20
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -408.0
+offset_top = 112.0
+offset_right = 68.0
+offset_bottom = 195.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 52
+text = "TÚ Mejor Desempeño"
+
+[node name="score_holder" type="VBoxContainer" parent="."]
+z_index = 20
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 156.0
+offset_top = -36.0
+offset_right = 936.0
+offset_bottom = 76.0
+grow_vertical = 2
+
+[node name="continues_holder" type="HBoxContainer" parent="score_holder"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="continues_label" type="Label" parent="score_holder/continues_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 24
+text = "Muertes: "
+
+[node name="continues_counter" type="Label" parent="score_holder/continues_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="VSeparator" type="VSeparator" parent="score_holder"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_esdwp")
+
+[node name="quiz_holder" type="HBoxContainer" parent="score_holder"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="quiz_label" type="Label" parent="score_holder/quiz_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 24
+text = "Incorrectas / en blanco: "
+
+[node name="quiz_counter" type="Label" parent="score_holder/quiz_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="VSeparator2" type="VSeparator" parent="score_holder"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_4itwd")
+
+[node name="time_holder" type="HBoxContainer" parent="score_holder"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="time_label" type="Label" parent="score_holder/time_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 24
+text = "Tiempo: "
+
+[node name="time_counter" type="Label" parent="score_holder/time_holder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 24
+text = "00:00"
+
+[node name="final_score_container" type="VBoxContainer" parent="."]
+z_index = 20
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.553
+anchor_top = 0.593
+anchor_right = 0.553
+anchor_bottom = 0.593
+offset_left = -6.05603
+offset_top = -69.264
+offset_right = 449.944
+offset_bottom = 67.736
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="final_score_label" type="Label" parent="final_score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 42
+text = "CALIFICACIÓN:"
+horizontal_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="final_score_container"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_esdwp")
+
+[node name="final_score_counter" type="Label" parent="final_score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 48
+text = "1"
+
+[node name="date_container" type="HBoxContainer" parent="."]
+z_index = 20
+layout_mode = 0
+offset_left = 197.0
+offset_top = 425.0
+offset_right = 349.0
+offset_bottom = 490.0
+
+[node name="date_title_label" type="Label" parent="date_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 32
+text = "Fecha: "
+horizontal_alignment = 1
+
+[node name="date_label" type="Label" parent="date_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_8mdjb")
+theme_override_font_sizes/font_size = 32
+text = "1"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 87.0
+offset_top = -87.0
+offset_right = 255.0
+offset_bottom = -54.0
+grow_vertical = 0
+
+[node name="back_btn" type="Button" parent="VBoxContainer"]
+z_index = 20
+layout_mode = 2
+theme = ExtResource("6_jjht0")
+theme_override_font_sizes/font_size = 24
+text = "Atrás"
+
+[connection signal="pressed" from="VBoxContainer/back_btn" to="." method="_on_back_btn_pressed"]

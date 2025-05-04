@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6r0tcn317c75"]
+
+[ext_resource type="Script" path="res://Scenes/Dialogues/answer_box.gd" id="1_0k15h"]
+[ext_resource type="Texture2D" uid="uid://k7orl8dpc4y2" path="res://Assets/Dialog_Box(16 x 16).png" id="1_aiphq"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="3_n3as1"]
+[ext_resource type="Script" path="res://Scenes/Dialogues/text_edit.gd" id="4_bcgry"]
+[ext_resource type="AudioStream" uid="uid://ba2hxqf376lg" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Sounds/Jump.ogg" id="5_1tqjm"]
+[ext_resource type="AudioStream" uid="uid://bk01bmd5p2v58" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Sounds/Hit.ogg" id="6_5w77c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e40mt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8uo1"]
+
+[node name="answer_box" type="MarginContainer"]
+offset_right = 56.0
+offset_bottom = 24.0
+focus_mode = 2
+script = ExtResource("1_0k15h")
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_aiphq")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="label_margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="text_edit" type="LineEdit" parent="label_margin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n3as1")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e40mt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j8uo1")
+alignment = 1
+caret_blink = true
+script = ExtResource("4_bcgry")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Text_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1tqjm")
+pitch_scale = 2.0
+
+[node name="Timer_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5w77c")
+volume_db = -13.0
+pitch_scale = 1.6
+
+[connection signal="text_changed" from="label_margin/text_edit" to="label_margin/text_edit" method="_on_text_changed"]
+[connection signal="text_submitted" from="label_margin/text_edit" to="." method="_on_text_edit_text_submitted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

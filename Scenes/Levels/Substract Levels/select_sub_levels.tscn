@@ -1,0 +1,161 @@
+[gd_scene load_steps=12 format=3 uid="uid://dolina5ab8xke"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/Substract Levels/select_sub_levels.gd" id="1_scrnk"]
+[ext_resource type="PackedScene" uid="uid://itgch5o7a5g0" path="res://Scenes/level_btn.tscn" id="3_331wj"]
+[ext_resource type="Theme" uid="uid://dccsslvkp3j2s" path="res://Scenes/substract_level.tres" id="4_yjqkh"]
+[ext_resource type="PackedScene" uid="uid://k0rqsf8jjl0y" path="res://Scenes/Levels/Substract Levels/Substract_lvl_1.tscn" id="6_54bsv"]
+[ext_resource type="PackedScene" uid="uid://bv5qoqjp0x5ra" path="res://Scenes/Levels/Substract Levels/Substract_lvl_2.tscn" id="7_k2824"]
+[ext_resource type="PackedScene" uid="uid://c7mljb3dvjvlo" path="res://Scenes/Levels/Substract Levels/Substract_lvl_3.tscn" id="8_qa6q2"]
+[ext_resource type="PackedScene" uid="uid://h0p3vv4u0i30" path="res://Scenes/Levels/Substract Levels/Substract_lvl_4.tscn" id="9_0f7re"]
+[ext_resource type="PackedScene" uid="uid://dgm2t2wsydc2b" path="res://Scenes/Levels/Substract Levels/Substract_lvl_5.tscn" id="10_6bk6q"]
+[ext_resource type="PackedScene" uid="uid://o2kubx8x2u83" path="res://Scenes/stats_btn.tscn" id="10_fptq0"]
+[ext_resource type="Texture2D" uid="uid://c13ky2o1o65w" path="res://Assets/passed.png" id="11_6cqdm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmj1o"]
+
+[node name="select_sub_levels" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 216.0
+script = ExtResource("1_scrnk")
+
+[node name="substract_levels" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 242.0
+offset_bottom = 208.0
+
+[node name="level_btn" parent="substract_levels" instance=ExtResource("3_331wj")]
+layout_mode = 2
+theme = ExtResource("4_yjqkh")
+theme_override_font_sizes/font_size = 24
+text = "1- Centenas"
+alignment = 0
+level = ExtResource("6_54bsv")
+
+[node name="HSeparator" type="HSeparator" parent="substract_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wmj1o")
+
+[node name="level_btn2" parent="substract_levels" instance=ExtResource("3_331wj")]
+layout_mode = 2
+theme = ExtResource("4_yjqkh")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "2- Miles"
+alignment = 0
+level = ExtResource("7_k2824")
+
+[node name="HSeparator2" type="HSeparator" parent="substract_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wmj1o")
+
+[node name="level_btn3" parent="substract_levels" instance=ExtResource("3_331wj")]
+layout_mode = 2
+theme = ExtResource("4_yjqkh")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "3- Diez Miles"
+alignment = 0
+level = ExtResource("8_qa6q2")
+
+[node name="HSeparator3" type="HSeparator" parent="substract_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wmj1o")
+
+[node name="level_btn4" parent="substract_levels" instance=ExtResource("3_331wj")]
+layout_mode = 2
+theme = ExtResource("4_yjqkh")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "4- Cien Miles 1"
+alignment = 0
+level = ExtResource("9_0f7re")
+
+[node name="HSeparator4" type="HSeparator" parent="substract_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wmj1o")
+
+[node name="level_btn5" parent="substract_levels" instance=ExtResource("3_331wj")]
+layout_mode = 2
+theme = ExtResource("4_yjqkh")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "5- Cien Miles 2"
+alignment = 0
+level = ExtResource("10_6bk6q")
+
+[node name="check_lvl1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(288.125, 16)
+scale = Vector2(0.122833, 0.0586081)
+texture = ExtResource("11_6cqdm")
+
+[node name="check_lvl2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(288.125, 56)
+scale = Vector2(0.122833, 0.0586081)
+texture = ExtResource("11_6cqdm")
+
+[node name="check_lvl3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(288.125, 104)
+scale = Vector2(0.122833, 0.0586081)
+texture = ExtResource("11_6cqdm")
+
+[node name="check_lvl4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(288.125, 144)
+scale = Vector2(0.122833, 0.0586081)
+texture = ExtResource("11_6cqdm")
+
+[node name="check_lvl5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(288.125, 192)
+scale = Vector2(0.122833, 0.058608)
+texture = ExtResource("11_6cqdm")
+
+[node name="stats_btn" parent="." instance=ExtResource("10_fptq0")]
+layout_mode = 0
+offset_left = 265.0
+offset_top = -2.0
+offset_right = 305.0
+offset_bottom = 34.0
+level_number = 1
+operation_lvl = "sub"
+
+[node name="stats_btn2" parent="." instance=ExtResource("10_fptq0")]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 44.0
+offset_right = 305.0
+offset_bottom = 80.0
+level_number = 2
+operation_lvl = "sub"
+
+[node name="stats_btn3" parent="." instance=ExtResource("10_fptq0")]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 87.0
+offset_right = 305.0
+offset_bottom = 123.0
+level_number = 3
+operation_lvl = "sub"
+
+[node name="stats_btn4" parent="." instance=ExtResource("10_fptq0")]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 131.0
+offset_right = 305.0
+offset_bottom = 167.0
+level_number = 4
+operation_lvl = "sub"
+
+[node name="stats_btn5" parent="." instance=ExtResource("10_fptq0")]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 173.0
+offset_right = 305.0
+offset_bottom = 209.0
+level_number = 5
+operation_lvl = "sub"

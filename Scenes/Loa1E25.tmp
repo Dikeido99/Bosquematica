@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://b421204tmtlr"]
+
+[ext_resource type="Texture2D" uid="uid://gm3dvfrkhsge" path="res://Assets Juego/AssetsAtrapaManzanas/Assets/bosque.png" id="1_difwj"]
+[ext_resource type="Script" path="res://Scenes/Load_Game_Screen.gd" id="1_ijtbt"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets Juego/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="2_a7avp"]
+[ext_resource type="Theme" uid="uid://cs3nl7w47ys5h" path="res://Scenes/default_button.tres" id="3_grd70"]
+
+[node name="Load_Game_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ijtbt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -64.0
+offset_top = -36.0
+offset_right = 1216.0
+offset_bottom = 684.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_difwj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -474.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_a7avp")
+theme_override_font_sizes/font_size = 48
+text = "JUGAR"
+horizontal_alignment = 1
+
+[node name="Saves" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = -57.0
+offset_right = 169.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="load_game" type="Button" parent="Saves"]
+layout_mode = 2
+theme = ExtResource("3_grd70")
+theme_override_font_sizes/font_size = 38
+text = "Continuar"
+
+[node name="HSeparator" type="HSeparator" parent="Saves"]
+layout_mode = 2
+
+[node name="new_game" type="Button" parent="Saves"]
+layout_mode = 2
+theme = ExtResource("3_grd70")
+theme_override_font_sizes/font_size = 38
+text = "Nueva Partida"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Back_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_grd70")
+theme_override_font_sizes/font_size = 38
+text = "Volver al menú principal"
+
+[connection signal="pressed" from="Saves/load_game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="Saves/new_game" to="." method="_on_new_game_pressed"]

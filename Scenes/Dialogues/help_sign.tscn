@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b81h38crhxc2r"]
+
+[ext_resource type="Texture2D" uid="uid://bahcvv56uoioi" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Parallax/sign.png" id="1_3bupg"]
+[ext_resource type="Script" path="res://Scenes/Dialogues/help_sign.gd" id="1_gjdfa"]
+[ext_resource type="PackedScene" uid="uid://chgdbck7qwhnh" path="res://Interaction/interaction_area/interaction_area.tscn" id="2_ct01t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fhxv"]
+size = Vector2(16, 19)
+
+[node name="help_sign" type="Node2D"]
+script = ExtResource("1_gjdfa")
+lines = Array[String](["Hola Aventurero", "Listo para la aventura?", "Buena Suerte en ello!"])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3bupg")
+
+[node name="interaction_area" parent="." instance=ExtResource("2_ct01t")]
+action_name = "Leer Mensaje"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction_area"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_2fhxv")

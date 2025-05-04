@@ -1,0 +1,505 @@
+[gd_scene load_steps=6 format=3 uid="uid://comi6nlmwob6r"]
+
+[ext_resource type="Texture2D" uid="uid://gm3dvfrkhsge" path="res://Assets/AssetsAtrapaManzanas/Assets/bosque.png" id="1_5ur8c"]
+[ext_resource type="Script" path="res://Scenes/leaderboard_screen.gd" id="1_e4i4v"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="2_k57gl"]
+[ext_resource type="Theme" uid="uid://cs3nl7w47ys5h" path="res://Scenes/default_button.tres" id="3_i43qg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ub6b"]
+
+[node name="leaderboard_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e4i4v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -36.0
+offset_right = 1216.0
+offset_bottom = 684.0
+texture = ExtResource("1_5ur8c")
+
+[node name="head_lbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_top = 21.0
+offset_right = 379.0
+offset_bottom = 81.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 42
+text = "Top 5 de Puntuaciones"
+horizontal_alignment = 1
+
+[node name="Pos_container" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 203.0
+offset_top = 83.0
+offset_right = 335.0
+offset_bottom = 483.0
+
+[node name="pos_lbl" type="Label" parent="Pos_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "Pos."
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Pos_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="first_lbl" type="Label" parent="Pos_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.921569, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "#1"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Pos_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="second_lbl" type="Label" parent="Pos_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.686275, 0.568627, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "#2"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="Pos_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="third_lbl" type="Label" parent="Pos_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.541176, 0.301961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "#3"
+horizontal_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="Pos_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="fourth_lbl" type="Label" parent="Pos_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "#4"
+horizontal_alignment = 1
+
+[node name="HSeparator5" type="HSeparator" parent="Pos_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="sixth_lbl" type="Label" parent="Pos_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "#5"
+horizontal_alignment = 1
+
+[node name="Player_container" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 457.0
+offset_top = 83.0
+offset_right = 697.0
+offset_bottom = 463.0
+
+[node name="player_lbl" type="Label" parent="Player_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "Jugador"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Player_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="player_1" type="Label" parent="Player_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.921569, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Player_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="player_2" type="Label" parent="Player_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.686275, 0.568627, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="Player_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="player_3" type="Label" parent="Player_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.541176, 0.301961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="Player_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="player_4" type="Label" parent="Player_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator5" type="HSeparator" parent="Player_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="player_5" type="Label" parent="Player_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-
+"
+horizontal_alignment = 1
+
+[node name="Score_container" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 782.0
+offset_top = 83.0
+offset_right = 1022.0
+offset_bottom = 463.0
+
+[node name="score_lbl" type="Label" parent="Score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "Puntos"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Score_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="score_1" type="Label" parent="Score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.921569, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Score_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="score_2" type="Label" parent="Score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.686275, 0.568627, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="Score_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="score_3" type="Label" parent="Score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.541176, 0.301961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="Score_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="score_4" type="Label" parent="Score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator5" type="HSeparator" parent="Score_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="score_5" type="Label" parent="Score_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-
+"
+horizontal_alignment = 1
+
+[node name="Rank_container" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 848.0
+offset_top = 83.0
+offset_right = 1088.0
+offset_bottom = 463.0
+
+[node name="rank_lbl" type="Label" parent="Rank_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "Rango"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Rank_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="rank_1" type="Label" parent="Rank_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Rank_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="rank_2" type="Label" parent="Rank_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="Rank_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="rank_3" type="Label" parent="Rank_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="Rank_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="rank_4" type="Label" parent="Rank_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-"
+horizontal_alignment = 1
+
+[node name="HSeparator5" type="HSeparator" parent="Rank_container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7ub6b")
+
+[node name="rank_5" type="Label" parent="Rank_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 28
+text = "-
+"
+horizontal_alignment = 1
+
+[node name="separator_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 451.0
+offset_right = 996.0
+offset_bottom = 496.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "-----------------------------------"
+horizontal_alignment = 1
+
+[node name="gamer_lbl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 496.0
+offset_right = 313.0
+offset_bottom = 541.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.862745, 0.494118, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "Tú"
+horizontal_alignment = 1
+
+[node name="gamer_name_lbl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 496.0
+offset_right = 669.0
+offset_bottom = 541.0
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "-"
+horizontal_alignment = 1
+
+[node name="gamer_score_lbl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 496.0
+offset_right = 977.0
+offset_bottom = 541.0
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_k57gl")
+theme_override_font_sizes/font_size = 36
+text = "-"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -42.0
+offset_right = 362.0
+offset_bottom = -10.0
+grow_vertical = 0
+
+[node name="back_btn" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_i43qg")
+theme_override_font_sizes/font_size = 24
+text = "Volver al Menú Principal"
+
+[connection signal="pressed" from="VBoxContainer2/back_btn" to="." method="_on_back_btn_pressed"]

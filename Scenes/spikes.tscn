@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5kc7xphhw2w2"]
+
+[ext_resource type="Texture2D" uid="uid://b7ulpnpbw4u2f" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Traps/Spikes/Idle.png" id="1_13r4d"]
+[ext_resource type="Script" path="res://Scenes/spikes.gd" id="1_uctog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8cq4"]
+size = Vector2(8, 12)
+
+[node name="Spikes" type="StaticBody2D" groups=["Traps"]]
+position = Vector2(0, -8)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_uctog")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_13r4d")
+region_enabled = true
+region_rect = Rect2(0, 8, 8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l8cq4")
+debug_color = Color(1, 0, 0, 0.419608)

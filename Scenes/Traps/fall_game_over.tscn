@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq5hrkh7i64k8"]
+
+[ext_resource type="Script" path="res://Scenes/Traps/fall_game_over.gd" id="1_2kn2h"]
+
+[node name="FallGameOver" type="Area2D" groups=["Traps"]]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_2kn2h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

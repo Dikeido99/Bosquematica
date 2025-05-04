@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc4wyr5yihy70"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/Level.gd" id="1_5dwe7"]
+[ext_resource type="PackedScene" uid="uid://ba6gxi610e4tm" path="res://Player/player.tscn" id="2_ccbd2"]
+[ext_resource type="PackedScene" uid="uid://ndsbklqnsisi" path="res://Scenes/Levels/pause_menu.tscn" id="2_hnqwi"]
+[ext_resource type="PackedScene" uid="uid://b4apwgdcrxu5y" path="res://Scenes/Levels/hud.tscn" id="3_a6o77"]
+[ext_resource type="PackedScene" uid="uid://m8xqabd1o31q" path="res://Scenes/mobile_controls.tscn" id="5_gyhu2"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_5dwe7")
+
+[node name="HUD" parent="." instance=ExtResource("3_a6o77")]
+
+[node name="Mobile_controls" parent="." instance=ExtResource("5_gyhu2")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(7, 277)
+zoom = Vector2(3.6, 3.6)
+process_callback = 0
+
+[node name="Quiz_position" type="Marker2D" parent="Camera2D"]
+position = Vector2(-7, -5)
+
+[node name="Player" parent="." instance=ExtResource("2_ccbd2")]
+position = Vector2(8, 266)
+
+[node name="pause_menu" parent="." instance=ExtResource("2_hnqwi")]
+
+[node name="Player_start_position" type="Marker2D" parent="."]
+
+[node name="Clock_Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Bg_Music" type="AudioStreamPlayer" parent="."]
+volume_db = -18.0
+autoplay = true
+
+[connection signal="timeout" from="Clock_Timer" to="." method="_on_clock_timer_timeout"]

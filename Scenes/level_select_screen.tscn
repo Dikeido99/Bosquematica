@@ -1,0 +1,188 @@
+[gd_scene load_steps=13 format=3 uid="uid://o8s384x3x315"]
+
+[ext_resource type="Script" path="res://Scenes/level_select_screen.gd" id="1_qepbf"]
+[ext_resource type="Texture2D" uid="uid://gm3dvfrkhsge" path="res://Assets/AssetsAtrapaManzanas/Assets/bosque.png" id="2_4w3vr"]
+[ext_resource type="Theme" uid="uid://cs3nl7w47ys5h" path="res://Scenes/default_button.tres" id="2_poeu1"]
+[ext_resource type="PackedScene" uid="uid://dgq2ec2y5e7d4" path="res://Scenes/Levels/Sum Levels/select_sum_levels.tscn" id="3_d4wmc"]
+[ext_resource type="PackedScene" uid="uid://dolina5ab8xke" path="res://Scenes/Levels/Substract Levels/select_sub_levels.tscn" id="4_jtkbx"]
+[ext_resource type="PackedScene" uid="uid://di0bdcxhef6oo" path="res://Scenes/Levels/Multiply Levels/select_mul_levels.tscn" id="5_8vi6t"]
+[ext_resource type="PackedScene" uid="uid://p5ketaido88x" path="res://Scenes/Levels/Division Levels/select_div_levels.tscn" id="6_4aufm"]
+[ext_resource type="Texture2D" uid="uid://cfdg7j1drermj" path="res://Assets/sum_final_icon.png" id="8_thrwi"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="9_if27r"]
+[ext_resource type="Texture2D" uid="uid://buyvq0ldxvqaf" path="res://Assets/sub_final_icon.png" id="10_gx43o"]
+[ext_resource type="Texture2D" uid="uid://d10m31d3o4038" path="res://Assets/mul_final_icon.png" id="11_ihkp1"]
+[ext_resource type="Texture2D" uid="uid://bhlpa05yeg2d4" path="res://Assets/div_final_icon.png" id="12_ty31c"]
+
+[node name="level_select_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qepbf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -64.0
+offset_top = -36.0
+offset_right = 1216.0
+offset_bottom = 684.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4w3vr")
+
+[node name="sum" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 72.0
+offset_top = 55.5
+offset_right = 204.0
+offset_bottom = 116.5
+
+[node name="sum_icon" type="Sprite2D" parent="sum"]
+position = Vector2(171, 27)
+scale = Vector2(0.270677, 0.24)
+texture = ExtResource("8_thrwi")
+
+[node name="sum_lbl" type="Label" parent="sum"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.462745, 0, 1)
+theme_override_colors/font_outline_color = Color(0.996078, 0.686275, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_if27r")
+theme_override_font_sizes/font_size = 42
+text = "SUMA"
+
+[node name="select_sum_levels" parent="." instance=ExtResource("3_d4wmc")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -434.0
+offset_top = -201.0
+offset_right = -50.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sub" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 618.0
+offset_top = 53.5
+offset_right = 777.0
+offset_bottom = 114.5
+
+[node name="sub_lbl" type="Label" parent="sub"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.462745, 0.670588, 1)
+theme_override_colors/font_outline_color = Color(0.952941, 0.243137, 0.529412, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_if27r")
+theme_override_font_sizes/font_size = 42
+text = "RESTA"
+
+[node name="substract_icon" type="Sprite2D" parent="sub"]
+position = Vector2(200.875, 27.25)
+scale = Vector2(0.192725, 0.252551)
+texture = ExtResource("10_gx43o")
+
+[node name="select_sub_levels" parent="." instance=ExtResource("4_jtkbx")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 103.0
+offset_top = -203.0
+offset_right = 487.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mul" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 71.0
+offset_top = 356.5
+offset_right = 362.0
+offset_bottom = 417.5
+
+[node name="mul_lbl" type="Label" parent="mul"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.235294, 0.235294, 1, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.686275, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_if27r")
+theme_override_font_sizes/font_size = 42
+text = "MULTIPLICA"
+
+[node name="multiply_icon" type="Sprite2D" parent="mul"]
+position = Vector2(333.5, 31.25)
+scale = Vector2(0.110526, 0.0864526)
+texture = ExtResource("11_ihkp1")
+
+[node name="select_mul_levels" parent="." instance=ExtResource("5_8vi6t")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -436.0
+offset_top = 97.0
+offset_right = -52.0
+offset_bottom = 417.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="div" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 612.0
+offset_top = 350.5
+offset_right = 777.0
+offset_bottom = 411.5
+
+[node name="div_lbl" type="Label" parent="div"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.117647, 0.627451, 0.611765, 1)
+theme_override_colors/font_outline_color = Color(0, 0.839216, 0.843137, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_if27r")
+theme_override_font_sizes/font_size = 42
+text = "DIVIDE"
+
+[node name="divide_icon" type="Sprite2D" parent="div"]
+position = Vector2(208.939, 29.3828)
+rotation = 0.767945
+scale = Vector2(0.113275, 0.085552)
+texture = ExtResource("12_ty31c")
+
+[node name="select_div_levels" parent="." instance=ExtResource("6_4aufm")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 104.0
+offset_top = 96.0
+offset_right = 488.0
+offset_bottom = 416.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_top = 12.0
+offset_right = 362.0
+offset_bottom = 44.0
+
+[node name="back_btn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_poeu1")
+theme_override_font_sizes/font_size = 24
+text = "Volver al Menú Principal"
+
+[connection signal="pressed" from="VBoxContainer/back_btn" to="." method="_on_back_btn_pressed"]

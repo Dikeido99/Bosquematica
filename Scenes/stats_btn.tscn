@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://o2kubx8x2u83"]
+
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="1_mlkk5"]
+[ext_resource type="Script" path="res://Scenes/stats_btn.gd" id="2_po1l8"]
+[ext_resource type="PackedScene" uid="uid://cxldx3e8bt7lx" path="res://Scenes/menu_lvl_score.tscn" id="3_pnc7k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nd5pt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyg6e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rjvs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b6f3n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uv8jg"]
+
+[node name="stats_btn" type="Button"]
+offset_right = 32.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_mlkk5")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd5pt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yyg6e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6rjvs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b6f3n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uv8jg")
+disabled = true
+text = "-"
+script = ExtResource("2_po1l8")
+score_scene = ExtResource("3_pnc7k")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

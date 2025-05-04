@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=3 uid="uid://m8xqabd1o31q"]
+
+[ext_resource type="Texture2D" uid="uid://durp1pco6q1x7" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_left_NORMAL.png" id="1_4evy0"]
+[ext_resource type="Script" path="res://Scenes/mobile_controls.gd" id="1_cgxio"]
+[ext_resource type="Texture2D" uid="uid://d3yldpwir4civ" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_left_PRESSED.png" id="2_i64j7"]
+[ext_resource type="Texture2D" uid="uid://blu7ou3f0hxim" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_right_NORMAL.png" id="3_xp5pr"]
+[ext_resource type="Texture2D" uid="uid://cgtg6wru4btn7" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_right_PRESSED.png" id="4_re8x4"]
+[ext_resource type="Texture2D" uid="uid://dn3ur6wm0qik0" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Menu/Buttons/Play.png" id="5_jbcxv"]
+[ext_resource type="Texture2D" uid="uid://bi3rfewyop7pb" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_up_NORMAL.png" id="5_t6ia0"]
+[ext_resource type="Texture2D" uid="uid://bcmrmgtm5cs34" path="res://Assets/mini_ui_buttons/mini_ui_buttons/ui_buttons_arrow_up_PRESSED.png" id="6_h1f3a"]
+[ext_resource type="Texture2D" uid="uid://d4lj4mknna3gy" path="res://Assets/mini_ui_buttons/mini_ui_buttons/interact.png" id="8_ncpn1"]
+
+[node name="Mobile_controls" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_cgxio")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="movement" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="ui_left" type="TouchScreenButton" parent="Control/movement"]
+position = Vector2(0, -125)
+scale = Vector2(5, 5)
+texture_normal = ExtResource("1_4evy0")
+texture_pressed = ExtResource("2_i64j7")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="ui_right" type="TouchScreenButton" parent="Control/movement"]
+position = Vector2(160, -125)
+scale = Vector2(5, 5)
+texture_normal = ExtResource("3_xp5pr")
+texture_pressed = ExtResource("4_re8x4")
+action = "ui_right"
+visibility_mode = 1
+
+[node name="pause" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ui_pause" type="TouchScreenButton" parent="Control/pause"]
+position = Vector2(502, -540)
+scale = Vector2(4.14286, 3.77273)
+texture_normal = ExtResource("5_jbcxv")
+action = "ui_cancel"
+visibility_mode = 1
+
+[node name="action" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ui_jump" type="TouchScreenButton" parent="Control/action"]
+position = Vector2(-130, -125)
+scale = Vector2(5, 5)
+texture_normal = ExtResource("5_t6ia0")
+texture_pressed = ExtResource("6_h1f3a")
+action = "ui_up"
+visibility_mode = 1
+
+[node name="ui_interact" type="TouchScreenButton" parent="Control/action"]
+position = Vector2(-99.9999, -243)
+scale = Vector2(5, 5)
+texture_normal = ExtResource("8_ncpn1")
+action = "interact"
+visibility_mode = 1

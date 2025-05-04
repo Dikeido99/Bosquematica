@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8ugwomja0wok"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/hitbox.gd" id="1_colaj"]
+
+[node name="Hitbox" type="Area2D"]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_colaj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

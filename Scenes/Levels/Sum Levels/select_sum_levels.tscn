@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgq2ec2y5e7d4"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/Sum Levels/select_sum_levels.gd" id="1_kppn1"]
+[ext_resource type="PackedScene" uid="uid://itgch5o7a5g0" path="res://Scenes/level_btn.tscn" id="3_uwifk"]
+[ext_resource type="PackedScene" uid="uid://brffi15dgyatm" path="res://Scenes/Levels/Sum Levels/Level_1.tscn" id="4_hf36m"]
+[ext_resource type="PackedScene" uid="uid://unpb8jltkndh" path="res://Scenes/Levels/Sum Levels/Level_2.tscn" id="5_wny30"]
+[ext_resource type="PackedScene" uid="uid://dpajksha3ptl0" path="res://Scenes/Levels/Sum Levels/Level_3.tscn" id="6_7o055"]
+[ext_resource type="PackedScene" uid="uid://ccohdfimber5u" path="res://Scenes/Levels/Sum Levels/Level_4.tscn" id="8_cgibd"]
+[ext_resource type="PackedScene" uid="uid://o2kubx8x2u83" path="res://Scenes/stats_btn.tscn" id="9_8wo34"]
+[ext_resource type="PackedScene" uid="uid://dv2jkole7uohp" path="res://Scenes/Levels/Sum Levels/Level_5.tscn" id="9_g11uq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a4vf4"]
+
+[node name="select_sum_levels" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 216.0
+script = ExtResource("1_kppn1")
+
+[node name="sum_levels" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 242.0
+offset_bottom = 208.0
+alignment = 1
+
+[node name="level_btn" parent="sum_levels" instance=ExtResource("3_uwifk")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "1- Centenas"
+alignment = 0
+level = ExtResource("4_hf36m")
+
+[node name="HSeparator" type="HSeparator" parent="sum_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_a4vf4")
+
+[node name="level_btn2" parent="sum_levels" instance=ExtResource("3_uwifk")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "2- Miles"
+alignment = 0
+level = ExtResource("5_wny30")
+
+[node name="HSeparator2" type="HSeparator" parent="sum_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_a4vf4")
+
+[node name="level_btn3" parent="sum_levels" instance=ExtResource("3_uwifk")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "3- Diez Miles"
+alignment = 0
+level = ExtResource("6_7o055")
+
+[node name="HSeparator3" type="HSeparator" parent="sum_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_a4vf4")
+
+[node name="level_btn4" parent="sum_levels" instance=ExtResource("3_uwifk")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "4- Cien Miles 1"
+alignment = 0
+level = ExtResource("8_cgibd")
+
+[node name="HSeparator4" type="HSeparator" parent="sum_levels"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_a4vf4")
+
+[node name="level_btn5" parent="sum_levels" instance=ExtResource("3_uwifk")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "5- Cien Miles 2"
+alignment = 0
+level = ExtResource("9_g11uq")
+
+[node name="stats_btn" parent="." instance=ExtResource("9_8wo34")]
+layout_mode = 2
+offset_left = 265.0
+offset_top = -2.0
+offset_right = 305.0
+offset_bottom = 34.0
+level_number = 1
+operation_lvl = "sum"
+
+[node name="stats_btn2" parent="." instance=ExtResource("9_8wo34")]
+layout_mode = 2
+offset_left = 265.0
+offset_top = 44.0
+offset_right = 305.0
+offset_bottom = 80.0
+level_number = 2
+operation_lvl = "sum"
+
+[node name="stats_btn3" parent="." instance=ExtResource("9_8wo34")]
+layout_mode = 2
+offset_left = 265.0
+offset_top = 87.0
+offset_right = 305.0
+offset_bottom = 123.0
+level_number = 3
+operation_lvl = "sum"
+
+[node name="stats_btn4" parent="." instance=ExtResource("9_8wo34")]
+layout_mode = 2
+offset_left = 265.0
+offset_top = 131.0
+offset_right = 305.0
+offset_bottom = 167.0
+level_number = 4
+operation_lvl = "sum"
+
+[node name="stats_btn5" parent="." instance=ExtResource("9_8wo34")]
+layout_mode = 2
+offset_left = 265.0
+offset_top = 173.0
+offset_right = 305.0
+offset_bottom = 209.0
+level_number = 5
+operation_lvl = "sum"

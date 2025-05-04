@@ -1,0 +1,50 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dccsslvkp3j2s"]
+
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets/Assets_PixelAdventure/Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="1_dtitm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70kng"]
+bg_color = Color(1, 0.588235, 0.980392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.862745, 0.494118, 0, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1e8lq"]
+bg_color = Color(1, 0.588235, 0.980392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.862745, 0.494118, 0, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47x82"]
+bg_color = Color(1, 0.462745, 0.670588, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.945098, 0, 0, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dtag"]
+bg_color = Color(1, 0.588235, 0.980392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.862745, 0.494118, 0, 1)
+
+[resource]
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 6
+Button/fonts/font = ExtResource("1_dtitm")
+Button/styles/focus = SubResource("StyleBoxFlat_70kng")
+Button/styles/hover = SubResource("StyleBoxFlat_1e8lq")
+Button/styles/normal = SubResource("StyleBoxFlat_47x82")
+Button/styles/pressed = SubResource("StyleBoxFlat_8dtag")
